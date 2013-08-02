@@ -1,5 +1,6 @@
-Enom API
-========
+Enom API For Laravel 4
+======================
+Requires Curl Wrapper: http://getsparks.org/packages/curl/show
 
 Example:
 

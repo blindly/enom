@@ -1,4 +1,8 @@
 <?php
+/*
+* Enom class for Laravel 4
+* Depends on Curl Wrapper : http://getsparks.org/packages/curl/show
+*/
 
 class Enom
 {
@@ -6,10 +10,7 @@ class Enom
   public static function execute($params)
   {
     $curl = new Curl;
-
-    $url = Config::get('variables.enom.url');
-    $username = Config::get('variables.enom.username');
-    $password = Config::get('variables.enom.password');
+    $url = 'http://reseller.enom.com/interface.asp';
 
     $options = array();
     foreach ($params as $key => $param)
@@ -19,7 +20,7 @@ class Enom
     }
     $myOptions = implode('&', $options);
 
-    $req = $url . '?uid=' . $username . '&pw=' . $password . '&' . $myOptions . '&ResponseType=xml';
+    $req = $url . '?' . $myOptions;
     $output = $curl->simple_get($req);
 
     $xml = simplexml_load_string($output);

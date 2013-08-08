@@ -1,6 +1,6 @@
 Enom API For Laravel 4
 ======================
-Requires Curl Wrapper: http://getsparks.org/packages/curl/show
+Requires Curl Wrapper: http://getsparks.org/packages/curl/show ( included )
 
 Example:
 
